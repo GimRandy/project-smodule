@@ -16,7 +16,7 @@ var httpsOption = {
 
 // sensor.load(
     // (success) => {
-        var server = https.createServer(httpsOption, app).listen(config.location.port, () => {
+        var server = https.createServer(httpsOption, app).listen(process.env.PORT || config.location.port, () => {
             console.log('# mode: ' + app.get('env'));
             // console.log('# Location: ' + sensor.location.host + ':' + config.location.port);
             // console.log('# proxy port: ' + sensor.location.s_port);
